@@ -29,6 +29,8 @@ final class Dish :Content {
 
 }
 
+extension Dish :Parameter {}
+
 
 // DishをExtentionして、SQLiteが適合するようにする
 extension Dish :SQLiteModel {
