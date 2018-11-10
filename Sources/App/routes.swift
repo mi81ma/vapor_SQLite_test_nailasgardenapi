@@ -5,8 +5,11 @@ import FluentSQLite
 public func routes(_ router: Router) throws {
 
     let dishesController = DishesController()
-    router.get("api/dishes", use: dishesController.getAll)
-    router.get("api/dish", Dish.parameter, use: dishesController.getById)
+    try router.register(collection: dishesController)
+
+
+//    router.get("api/dishes", use: dishesController.getAll)
+//    router.get("api/dish", Dish.parameter, use: dishesController.getById)
 
 /*
     router.post(Dish.self, at: "api/dish") { request, dish ->
